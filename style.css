@@ -1,0 +1,55 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rakkas", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+    text-align: center;
+    font-size: 24px;
+    margin: 10px 0 10px 0
+}
+
+footer{
+    text-align: center;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    /* border: solid 2px; */
+    padding: 20px;
+}
+
+.config-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    border: solid 1px;
+    background-color: aquamarine;
+}
+
+.sketch-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    border: solid 2px;
+    width: 500px;
+    height: 500px;
+}
+
