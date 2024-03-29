@@ -27,7 +27,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 60px;
     /* border: solid 2px; */
     padding: 20px;
 }
@@ -38,18 +38,22 @@ footer{
     text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 20px;
 
     border: solid 1px;
-    background-color: aquamarine;
+    box-shadow: 0 0 20px 0;
+    margin-right: 80px;
+    /* background-color: aquamarine; */
 }
 
 .sketch-container{
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: row; */
     border: solid 2px;
     width: 500px;
     height: 500px;
+    box-shadow: 0 0 20px 0;
 }
 
