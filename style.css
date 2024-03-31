@@ -11,6 +11,14 @@
     font-style: normal;
 }
 
+:root{
+    --text: rgb(240, 241, 241);
+    --background: rgb(10, 13, 12);
+    --primary: rgb(176, 202, 190);
+    --secondary: rgb(46, 77, 63);
+    --accent: rgb(82, 174, 132);
+}
+
 header{
     text-align: center;
     font-size: 24px;
@@ -45,7 +53,24 @@ footer{
     border: solid 1px;
     box-shadow: 0 0 20px 0;
     margin-right: 80px;
-    /* background-color: aquamarine; */
+}
+
+.config-container button{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.config-container button:hover {
+    background-color: black;
+    color: white;
+}
+
+.colorPad{
+    width: 100px;
+    height: 80px;
+    border: none;
 }
 
 .sketch-container{
