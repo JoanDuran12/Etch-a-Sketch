@@ -11,14 +11,6 @@
     font-style: normal;
 }
 
-:root{
-    --text: rgb(240, 241, 241);
-    --background: rgb(10, 13, 12);
-    --primary: rgb(176, 202, 190);
-    --secondary: rgb(46, 77, 63);
-    --accent: rgb(82, 174, 132);
-}
-
 header{
     text-align: center;
     font-size: 24px;
