@@ -1,37 +1,54 @@
 
+// Elements used
 const sketch = document.querySelector(".sketch-container");
 const colorPad = document.querySelector(".colorPad");
+const sizeBar = document.querySelector(".gridSize-bar")
+const sizeTitle = document.querySelector(".size-title")
+let color = colorPad.value;
+
+// -----------------------------------FUNCTIONS-------------------------------------------------
 
 // Create a new grid
-function createSketch(size) {
+function createGrid(size) {
     for(let i = 0; i < (size * size); i++) {
         const div = document.createElement("div");
         div.classList.add("sketchItem");
         div.style.flexBasis = (sketch.clientWidth / size) + "px";
-        // hoverEffectOn(div);
+        hoverEffectOn(div);
         sketch.appendChild(div);
     }
 }
 
-// Apply selected color to the corresponding cell
+// Add Event Listener to the grid
 function hoverEffectOn(item){
-    const color = colorPad.value;
     item.addEventListener("mouseover", () => {
         item.style.backgroundColor = color;
-    })
+    });
+};
+
+// Update future grid background color with selected color
+function updateColor(){
+    color = colorPad.value;
+};
+
+// Delete actual grid
+function deleteActualGrid(){
+    sketch.innerHTML = " ";
 }
 
-// function hoverEffectOff(item){
-//     const color = colorPad.value;
-//     item.addEventListener("mouseover", () => {
-//         this.style.color = "black";
-//     })
-// }
+// -----------------------------------MAIN-------------------------------------------------
 
 // Create a starting grid of 16x16
-createSketch(32);
+createGrid(16);
 
-colorPad.addEventListener("click", () =>{
-    const color = colorPad.value;
-    hoverEffectOn(div, color);
+// Update the current color
+colorPad.addEventListener("input", updateColor);
+
+// Create a new grid according to what the user range is
+sizeBar.addEventListener("mousemove", () => {
+    sizeTitle.textContent = `Grid Size: ${sizeBar.value}x${sizeBar.value}`
+});
+sizeBar.addEventListener("change", () => {
+    deleteActualGrid();
+    createGrid(sizeBar.value);
 })
